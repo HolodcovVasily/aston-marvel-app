@@ -1,0 +1,30 @@
+ {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ], "rules": {
+      "no-unused-vars":"warn",
+      "no-console":"warn",
+      "prefer-const":"warn",
+      "quotes":["warn", "single"],
+      "jsx-quotes":["error", "prefer-double"],
+      "import/order": [
+        "error",
+        {
+          "groups": [
+            "index",
+            "sibling",
+            "parent",
+            "internal",
+            "external",
+            "builtin",
+            "object",
+            "type"
+          ]
+        }
+      ],
+      "import/prefer-default-export": false,
+      "react/jsx-no-useless-fragment": false
+      }
+      
+  }
