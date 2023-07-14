@@ -1,10 +1,24 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage/HomePage";
+import { Favorites } from "./pages/Favorites/Favorites";
+import { SignIn } from "./pages/Sign In/SignIn";
+import SignUp from "./pages/Sign Up/SignUp";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./pages/Footer/Footer";
 
 function App() {
   return (
-    <div className="h-screen w-full md:w-auto bg-slate-900">
-      <h1 className="text-center pt-5 text-gray-200 font-bold">Marvel App</h1>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/signin" element={<SignIn />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
